@@ -1,2 +1,4 @@
 # Blog
-Blog with admin interface
+PHP Blog with admin interface.
+
+Training for CRUD (create, read, update, and delete) in PHP with MySQL requests.
