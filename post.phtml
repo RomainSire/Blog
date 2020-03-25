@@ -1,0 +1,41 @@
+  <article>
+    <h1><?= $post['title']; ?></h1>
+    <p><?= $post['categoryName']; ?></p>
+    <p><?= $post['content']; ?></p>
+    <p>Publié le
+      <?= date("d/m/Y \à G:i", strtotime($post['publicationDate'])); ?>
+      , par
+      <?= $post['authorFirstName'] ?>
+    </p>
+
+    <h2>Commentaires</h2>
+    <!-- Afficher tous les commentaires relatif à l'article -->
+    <?php foreach ($comments as $comment): ?>
+      <article class="comment">
+        <p>
+          <i class="fas fa-comment fa-flip-horizontal"></i>
+          <span class="author">
+            <?= $comment['nickname']; ?>
+          </span>
+          le <?= date("d/m/Y \à G:i", strtotime($comment['publicationDate'])); ?>
+        </p>
+        <p><?= $comment['content'] ?></p>
+      </article>
+
+    <?php endforeach; ?>
+    <!-- Formulaire pour ajouter un commentaire -->
+    <h3 id="bottomPage">Laisser un commentaire</h3>
+    <form action="<?= $baseUrl ?>/admin/add_comment.php" method="post">
+      <p>
+        <label for="pseudo">Pseudo</label>
+        <input type="text" name="pseudo" id="pseudo" placeholder="Votre pseudo" required>
+      </p>
+      <p>
+        <label for="content">Votre commentaire</label>
+        <textarea name="content"id="content" placeholder="Votre commentaire" required></textarea>
+      </p>
+      <input type="hidden" name="postId" value="<?= $_GET["id"] ?>">
+      <button type="submit" class="button">Poster</button>
+    </form>
+  </article>
+

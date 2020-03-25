@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lalezar|Roboto+Condensed:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="<?= $baseUrl ?>/css/normalize.css">
+    <link rel="stylesheet" href="<?= $baseUrl ?>/css/main.css">
+
+    <title>Bison Voyageur | <?= $pageTitle ?></title>
+  </head>
+  <body>
+
+    <header>
+      <div class="flexBox maxWidth">
+        <div class="logo"><a href="<?= $baseUrl ?>/index.php"><img src="<?= $baseUrl ?>/img/logo.png" alt="logo de Bison Voyageur"></a></div>
+
+        <?php include("nav.php"); // page qui permet de récupérer toutes les catégories et auteurs  ?>
+
+        <nav>
+          <ul>
+            <li><a href="<?= $baseUrl ?>/index.php">Accueil</a></li>
+            <li>
+              <a href="<?= $baseUrl ?>/categories.php">Catégories</a>
+              <ul class="nav-dropdown">
+                <?php foreach ($categories as $category): ?>
+                  <li>
+                    <a href="<?= $baseUrl ?>/categorie.php?id=<?= $category['id']; ?>">
+                      <?= $category['name']; ?>
+                    </a>
+                  </li>
+                <?php endforeach; ?>
+              </ul>
+            </li>
+            <li><a href="<?= $baseUrl ?>/authors.php">Auteurs</a>
+              <ul class="nav-dropdown">
+                <?php foreach ($authors as $author): ?>
+                  <li>
+                    <a href="<?= $baseUrl ?>/author.php?id=<?= $author['id']; ?>">
+                      <?= $author['firstName'] . ' ' . $author['lastName']; ?>
+                    </a>
+                  </li>
+                <?php endforeach; ?>
+              </ul>
+            </li>
+          </ul>
+          <form action="search.php" method="post">
+            <label for="search">Recherche</label>
+            <input id="search" type="text" name="search" placeholder="Rechercher">
+          </form>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="maxWidth">
+
+        <!-- Contenu -->
+        <?php include $template; ?>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="flexBox maxWidth">
+        <p>© 2019 - Bison Voyageur</p>
+        <p><a href="<?= $baseUrl ?>/admin/index.php">Admin</a></p>
+        <p class="footer-social">Suivez-moi sur :
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter-square"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

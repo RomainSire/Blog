@@ -1,0 +1,9 @@
+<h1>Liste des catégories</h1>
+<!-- Section #author-list : Affiche la liste des auteurs -->
+<section id="author-list"> <!-- Je ne change pas le nom, car je veux garder le même design ! -->
+  <ul>
+    <?php foreach ($categories as $category): ?>
+    <li><a href="<?= $baseUrl ?>/categorie.php?id=<?= $category['id']; ?>"><?= $category['name']; ?></a></li>
+    <?php endforeach; ?>
+  </ul>
+</section>

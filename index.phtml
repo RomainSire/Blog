@@ -1,0 +1,20 @@
+<h1><?= $pageTitle ?></h1>
+<!-- Section #author-list : Affiche la liste des auteurs -->
+<section id="last-posts">
+  <?php foreach ($posts as $post): ?>
+    <a href="<?= $baseUrl ?>/post.php?id=<?= $post['postId']; ?>">
+      <article>
+        <img src="https://picsum.photos/100/?random" alt="random image">
+        <h2><?= $post['title']; ?></h2>
+        <p><?= $post['categoryName']; ?></p>
+        <p><?= mb_strimwidth($post['content'], 0, 110, ' (...)'); ?></p>
+        <p>Publié le
+          <?= date("d/m/Y \à G:i", strtotime($post['publicationDate'])); ?>
+          , par
+          <?= $post['authorFirstName'] ?>
+        </p>
+        <div class="clear"></div>
+      </article>
+    </a>
+  <?php endforeach; ?>
+</section>

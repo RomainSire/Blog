@@ -1,0 +1,13 @@
+<h1>Liste des auteurs</h1>
+<!-- Section #author-list : Affiche la liste des auteurs -->
+<section id="author-list"> <!-- Je ne change pas le nom, car je veux garder le même design ! -->
+  <ul>
+    <?php foreach ($authors as $author): ?>
+    <li>
+      <a href="<?= $baseUrl ?>/author.php?id=<?= $author['id']; ?>">
+        <?= $author['firstName'] . " " . $author['lastName']; ?>
+      </a>
+    </li>
+    <?php endforeach; ?>
+  </ul>
+</section>
