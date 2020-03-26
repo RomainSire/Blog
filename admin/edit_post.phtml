@@ -1,0 +1,55 @@
+<h1>Publier un nouvel article</h1>
+
+<!-- Section #author-edit : section d'édition/ajout d'un auteur -->
+<section id="post-edit">
+  <hr>
+  <form action="edit_post.php" method="post">
+
+    <p>
+      <label for="title">Titre</label><!--
+      --><input type="text" name="title" id="title" placeholder="Titre de l'article" required  autofocus value="<?= $post['title']; ?>">
+    </p>
+
+
+    <p class="post-edit-select">
+      <label for="category">Catégorie</label><!--
+      --><select id="category" name="category" required>
+        <?php foreach ($categories as $category): ?>
+          <option
+            value="<?= $category['id']; ?>"
+              <?php if ($category['id'] == $post['category_id']): ?>
+                selected
+              <?php endif; ?>
+          >
+            <?= $category['name']; ?>
+          </option>
+        <?php endforeach; ?>
+      </select>
+    </p>
+
+
+    <p class="post-edit-select">
+      <label for="author">Auteur</label><!--
+      --><select id="author" name="author" required>
+        <?php foreach ($authors as $author): ?>
+          <option
+            value="<?= $author['id']; ?>"
+              <?php if ($author['id'] == $post['author_id']): ?>
+                selected
+              <?php endif; ?>
+          >
+            <?= $author['firstName']; ?> <?= $author['lastName']; ?>
+          </option>
+        <?php endforeach; ?>
+      </select>
+    </p>
+
+    <p class="post-edit-content">
+      <label for="content">Contenu</label>
+      <textarea id="content" name="content"><?= $post['content']; ?></textarea>
+    </p>
+
+    <input type="hidden" name="id" value="<?= $post['id'] ?>">
+    <button type="submit" class="button">Mettre à jour</button>
+  </form>
+</section>

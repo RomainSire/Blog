@@ -1,0 +1,26 @@
+<h1><?= $pageTitle ?></h1>
+<!-- Section #author-list : Affiche la liste des auteurs -->
+<section id="author-list">
+
+  <a href="posts.php" class="dashboard-item">
+    <h2>Articles</h2>
+    <p><?= $nbPost['NB'] ?> articles au total sur le site</p>
+  </a>
+
+
+  <a href="categories.php" class="dashboard-item">
+    <h2>Catégories</h2>
+    <p><?= $nbCategory['NB'] ?> catégories</p>
+  </a>
+
+  <a href="authors.php" class="dashboard-item">
+    <h2>Auteurs</h2>
+    <p><?= $nbAuthor['NB'] ?> auteurs</p>
+  </a>
+
+  <a href="comments.php" class="dashboard-item">
+    <h2>Commentaires</h2>
+    <p><?= $nbComment['NB'] ?> commentaires</p>
+  </a>
+
+</section>

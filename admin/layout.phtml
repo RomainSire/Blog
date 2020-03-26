@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lalezar|Roboto+Condensed:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="<?= $baseUrl ?>/css/normalize.css">
+    <link rel="stylesheet" href="<?= $baseUrl ?>/css/main.css">
+    <link rel="stylesheet" href="<?= $baseUrl ?>/css/admin.css">
+
+    <title>ADMIN | Bison Voyageur | <?= $pageTitle ?></title>
+  </head>
+  <body>
+
+    <aside>
+      <div class="logo"><img src="<?= $baseUrl ?>/img/logo.png" alt="logo de Bison Voyageur"></div>
+      <h2>Administration</h2>
+      <ul>
+        <li><a href="<?= $baseUrl ?>/index.php"><i class="fas fa-chevron-circle-left"></i> Site public</a></li>
+        <li><a href="<?= $baseUrl ?>/admin/index.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="<?= $baseUrl ?>/admin/posts.php"><i class="fas fa-edit"></i> Articles</a></li>
+        <li><a href="<?= $baseUrl ?>/admin/authors.php"><i class="fas fa-users"></i> Auteurs</a></li>
+        <li><a href="<?= $baseUrl ?>/admin/categories.php"><i class="fas fa-tags"></i> Catégories</a></li>
+        <li><a href="<?= $baseUrl ?>/admin/comments.php"><i class="fas fa-comments"></i> Commentairess</a></li>
+        <li><a href="<?= $baseUrl ?>/logout.php"><i class="fas fa-sign-out-alt"></i> Se déconnecter</a></li>
+      </ul>
+    </aside>
+
+    <div id="content">
+      <main>
+
+        <!-- Contenu -->
+        <?php include $template; ?>
+
+      </main>
+    </div>
+
+  </body>
+</html>

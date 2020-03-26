@@ -1,0 +1,34 @@
+<h1>Publier un nouvel article</h1>
+
+<!-- Section #author-edit : section d'édition/ajout d'un auteur -->
+<section id="post-edit">
+  <hr>
+  <form action="add_post.php" method="post">
+    <p>
+      <label for="title">Titre</label><!--
+      --><input type="text" name="title" id="title" placeholder="Titre de l'article" required  autofocus>
+    </p>
+    <p class="post-edit-select">
+      <label for="category">Catégorie</label><!--
+      --><select id="category" name="category" required>
+        <?php foreach ($categories as $category): ?>
+          <option value="<?= $category['id']; ?>"><?= $category['name']; ?></option>
+        <?php endforeach; ?>
+      </select>
+    </p>
+    <p class="post-edit-select">
+      <label for="author">Auteur</label><!--
+      --><select id="author" name="author" required>
+        <?php foreach ($authors as $author): ?>
+          <option value="<?= $author['id']; ?>"><?= $author['firstName'] . ' ' . $author['lastName']; ?></option>
+        <?php endforeach; ?>
+      </select>
+    </p>
+    <p class="post-edit-content">
+      <label for="content">Contenu</label>
+      <textarea id="content" name="content"></textarea>
+    </p>
+
+    <button type="submit" class="button">Publier</button>
+  </form>
+</section>

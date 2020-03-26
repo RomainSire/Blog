@@ -1,0 +1,28 @@
+<h1>Liste des auteurs</h1>
+<!-- Section #author-list : Affiche la liste des auteurs -->
+<section id="author-list">
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($authors as $author): ?>
+        <tr>
+          <td><?= $author['id']; ?></td>
+          <td><?= $author['firstName']; ?></td>
+          <td><?= $author['lastName']; ?></td>
+          <td>
+            <a href="edit_author.php?id=<?= $author['id'] ?>"><i class="fas fa-edit"></i></a>
+            <a href="delete_author.php?id=<?= $author['id'] ?>"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
+  <a href="add_author.php" class="button">Ajouter un auteur</a>
+</section>

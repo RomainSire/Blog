@@ -1,0 +1,18 @@
+<h1>Editer un commentaire</h1>
+
+<!-- Section #author-edit : section d'édition/ajout d'un auteur -->
+<section id="post-edit">
+  <hr>
+  <form action="edit_comment.php" method="post">
+    <p>
+      <label for="nickname">Pseudo</label>
+      <input type="text" name="nickname" id="nickname" placeholder="Pseudo" required  autofocus value="<?= $comment['nickname']; ?>">
+    </p>
+    <p class="post-edit-content">
+      <label for="content">Commentaire</label>
+      <textarea id="content" name="content"><?= $comment['content']; ?></textarea>
+    </p>
+    <input type="hidden" name="id" value="<?= $comment['id'] ?>">
+    <button type="submit" class="button">Mettre à jour</button>
+  </form>
+</section>

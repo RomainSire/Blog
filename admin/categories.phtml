@@ -1,0 +1,27 @@
+<h1>Liste des catégories</h1>
+<!-- Section #author-list : Affiche la liste des auteurs -->
+<section id="author-list"> <!-- Je ne change pas le nom, car je veux garder le même design ! -->
+  <table>
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Nom</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($categories as $category): ?>
+        <tr>
+          <td><?= $category['id']; ?></td>
+
+          <td><?= $category['name']; ?></td>
+          <td>
+            <a href="edit_category.php?id=<?= $category['id'] ?>"><i class="fas fa-edit"></i></a>
+            <a href="delete_category.php?id=<?= $category['id'] ?>"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
+  <a href="add_category.php" class="button">Ajouter un catégorie</a>
+</section>
