@@ -70,7 +70,7 @@ on spécifie le comportement à adopter pour deux cas de figures
     * Home (list of the X last articles)
     * Article page
 
-Bonus :
+- Additional
     * Search
     * Categorie page
     * Author page
