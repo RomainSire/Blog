@@ -3,14 +3,17 @@ Simple content management system (CMS) in PHP for a Blog.
 
 Training for CRUD (create, read, update, and delete) in PHP with MySQL requests.
 
-## Goals
+## Main goals
 - Post articles (title, content, date)
 - Sort articles into categories
-- Multi-user with different authentication rights
+- Multi-user authentication with different edition rights
 - Comments on articles
 - List and display the last articles
 - Article edit
+- login to access admin pages
 - ...
+## Additional features
+- image management..
 
 ## Database (in french)
 
@@ -80,11 +83,3 @@ Voir quelles commandes SQL vont nous être utiles pour  :
 - ajouter un enregistrement dans une table          SQL INSERT INTO
 - mettre à jour un enregistrement dans une table    SQL UPDATE
 - supprimer un enregistrement dans une table        SQL DELETE FROM
-
-
-
-## Additional features
-
-  - login to access admin pages
-  - multi-user management, with different edition rights
-  - image management.. !
