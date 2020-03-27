@@ -23,21 +23,24 @@ Training for CRUD (create, read, update, and delete) in PHP with MySQL requests.
   référence à l'auteur (id)     |   TINYINT       |    author_id --> Clé étrangère (Foreign Key = FK)
   référence à la catégorie (id) |   TINYINT       |    category_id --> FK
 
-  Table auteur                                            author
-    - id unique Auteur                - TINYINT           id --> PK A_I
-    - nom                             - VARCHAR(255)      lastName
-    - prénom                          - VARCHAR(255)      firstName
+  Table auteur                  |                 |    author
+  ---                           |   ---           |     ---
+  id unique Auteur              |   TINYINT       |    id --> PK A_I
+  nom                           |   VARCHAR(255)  |    lastName
+  prénom                        |   VARCHAR(255)  |    firstName
 
-  Table catégorie :                                       category
-    - id unique catégorie             - TINYINT           id --> PK A_I
-    - Intitulé                        - VARCHAR(255)      name
+  Table catégorie               |                 |    category
+  ---                           |   ---           |    ---
+  id unique catégorie           |   TINYINT       |    id --> PK A_I
+  Intitulé                      |   VARCHAR(255)  |    name
 
-  Table Commentaires :                                    comment
-    - id unique commentaire           - MEDIUMINT         id --> PK A_I
-    - Pseudo                          - VARCHAR(255)      nickname
-    - Contenu du commentaire          - TEXT              content
-    - Date                            - DATETIME          publicationDate
-    - Référence à l'article (id)      - SMALLINT          post_id --> FK
+  Table Commentaires            |                 |    comment
+  ---                           |   ---           |     ---
+  id unique commentaire         |   MEDIUMINT     |    id --> PK A_I
+  Pseudo                        |   VARCHAR(255)  |    nickname
+  Contenu du commentaire        |   TEXT          |    content
+  Date                          |   DATETIME      |    publicationDate
+  Référence à l'article (id)    |   SMALLINT      |    post_id --> FK
 
 NB : Lors de la création de la base, il faut aussi choisir l'encodage. On choisit "utf8_general_ci" dans la plupart des cas !
 
