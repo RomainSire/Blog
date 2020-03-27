@@ -12,7 +12,7 @@ Training for CRUD (create, read, update, and delete) in PHP with MySQL requests.
 - Article edit
 - ...
 
-## Database
+## Database (in french)
 
   Table article                 |                 |    post
   ---                           |   ---           |     ---
@@ -59,24 +59,23 @@ on spécifie le comportement à adopter pour deux cas de figures
 
 
 
-PAGES À DÉVELOPPER
--------
-
+## Pages to create
 - Administration :
     * CRUD articles
-    * CRUD catégories
-    * CRUD auteurs
-   (* CRUD commentaires)
+    * CRUD categories
+    * CRUD authors
+   (* CRUD comments)
 
-- Partie publique
-    * Accueil (lister les X derniers articles)
-    * Page d'un article
+- Public
+    * Home (list of the X last articles)
+    * Article page
 
 Bonus :
-    * Recherche
-    * Page catégorie
-    * Page auteur
+    * Search
+    * Categorie page
+    * Author page
 
+## Memo (in French)
 Voir quelles commandes SQL vont nous être utiles pour  :
 - ajouter un enregistrement dans une table          SQL INSERT INTO
 - mettre à jour un enregistrement dans une table    SQL UPDATE
@@ -84,10 +83,8 @@ Voir quelles commandes SQL vont nous être utiles pour  :
 
 
 
+## Additional features
 
-
-FONCTIONNALITÉS BONUS
-  - login pour accéder aux pages admin
-  - gestion de plusieurs comptes utilisateurs avec éventuellement des droits d'édition différents
-  - Ajouter une image de couverture pour chaque article
-  - Pouvoir mettre des images dans le contenu des articles
+  - login to access admin pages
+  - multi-user management, with different edition rights
+  - image management.. !
