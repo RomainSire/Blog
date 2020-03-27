@@ -4,28 +4,20 @@ Simple content management system (CMS) in PHP for a Blog.
 Training for CRUD (create, read, update, and delete) in PHP with MySQL requests.
 
 ## Goals
-
- ---
- 
- 
-Imaginer ce qu'on doit stocker dans la base de données pour le blog.
-- De base le client souhaite pouvoir avoir plusieurs rédacteurs sur le site (nom, prenom)
-- Pouvoir poster des articles (Titre, Contenu, Date de publication)
-- Et pouvoir ranger chaque article dans une catégorie
-- Faire des commentaires sur les articles
-
-Réfléchir aussi aux pages devoir développer :
-- Page lister les derniers articles...
-- Une page pour éditer un article...
+- Post articles (title, content, date)
+- Sort articles into categories
+- Multi-user with different authentication rights
+- Comments on articles
+- List and display the last articles
+- Article edit
 - ...
 
+## Database
 
-BASE DE DONNÉES  À CRÉER
--------
-
-BASE DE DONNÉES                                           blog
-  Table article :                                         post
-    - id unique                       - SMALLINT          id --> Clé Primaire (Primary Key = PK) + Auto Increment (A_I)
+BASE DE DONNÉES                    |                   |    blog
+ --- | --- | ---
+  Table article :                  |                   |    post
+    - id unique                    |   - SMALLINT      |   id --> Clé Primaire (Primary Key = PK) + Auto Increment (A_I)
     - Titre                           - VARCHAR(255)      title
     - Contenu                         - TEXT              content
     - Date de publication             - DATETIME          publicationDate
