@@ -16,9 +16,9 @@ Training for CRUD (create, read, update, and delete) in PHP with MySQL requests.
 
 BASE DE DONNÉES                    |                   |    blog
  --- | --- | ---
-  Table article :                  |                   |    post
-    - id unique                    |   - SMALLINT      |   id --> Clé Primaire (Primary Key = PK) + Auto Increment (A_I)
-    - Titre                        |   - VARCHAR(255)  |    title
+  *Table article :*                  |                   |    post
+  id unique                    |   - SMALLINT      |   id --> Clé Primaire (Primary Key = PK) + Auto Increment (A_I)
+  Titre                        |   - VARCHAR(255)  |    title
     - Contenu                      |   - TEXT          |    content
     - Date de publication             - DATETIME          publicationDate
     - référence à l'auteur (id)       - TINYINT           author_id --> Clé étrangère (Foreign Key = FK)
