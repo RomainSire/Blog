@@ -15,6 +15,22 @@ Training for CRUD (create, read, update, and delete) in PHP with MySQL requests.
 ## Additional features
 - image management..
 
+## Pages to create
+- Administration :
+    * CRUD articles
+    * CRUD categories
+    * CRUD authors
+   (* CRUD comments)
+
+- Public
+    * Home (list of the X last articles)
+    * Article page
+
+- Additional
+    * Search
+    * Categorie page
+    * Author page
+
 ## Database (in french)
 
   Table article                 |                 |    post
@@ -59,24 +75,6 @@ on spécifie le comportement à adopter pour deux cas de figures
     - NO ACTION : ne rien faire (on va laisse la valeur actuelle dans la colonne author_id)
     - RESTRICT : on ne pourra pas supprimer l'auteur tant que des articles y font références
 
-
-
-
-## Pages to create
-- Administration :
-    * CRUD articles
-    * CRUD categories
-    * CRUD authors
-   (* CRUD comments)
-
-- Public
-    * Home (list of the X last articles)
-    * Article page
-
-- Additional
-    * Search
-    * Categorie page
-    * Author page
 
 ## Memo (in French)
 Voir quelles commandes SQL vont nous être utiles pour  :
